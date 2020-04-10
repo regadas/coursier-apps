@@ -32,6 +32,8 @@ ThisBuild / credentials += (for {
 ThisBuild / dynverSonatypeSnapshots := true
 ThisBuild / publishTo := sonatypePublishToBundle.value
 
+publish / skip := true
+
 lazy val apps = project.settings(
   name := "coursier-apps",
   Compile / resourceDirectory := baseDirectory.value / "resources",
